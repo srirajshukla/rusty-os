@@ -10,6 +10,10 @@ authors =  ["Gyanendra Shukla <gyanendra.shukla@protonmail.com>"]
 bootloader = "0.9.8"
 volatile = "0.2.6"
 
+[dependencies.lazy_static]
+version = "1.0"
+features = ["spin_no_std"]
+
 # The profile used for `cargo build` i.e. dev build
 [profile.dev]
 panic = "abort" # Disable stack unwinding on panic
