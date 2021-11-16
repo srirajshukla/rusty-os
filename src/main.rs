@@ -33,5 +33,10 @@ pub extern "C" fn _start() -> ! {
     write!(vga_buffer::WRITER.lock(), "Here are some caluclaitons,
             a = {}, a/b = {}, {}, {}", 3.0/4.0, 1.0/3.0, 1.0/9.0, 7.0/9.0).unwrap();
 
+    print!("aye from hello\t");
+    println!("now println says something");
+    print!("ahoy, {}\n", "amigo");
+    println!("hurray!!! {}", "hello");
+
     loop {}
 }
