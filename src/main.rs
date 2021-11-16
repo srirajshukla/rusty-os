@@ -7,6 +7,7 @@ use core::panic::PanicInfo;
 // This function is called on panic.
 #[panic_handler]
 fn panic(_info: &PanicInfo) -> ! {
+    println!("{}", _info);
     loop {}
 }
 
@@ -36,6 +37,7 @@ pub extern "C" fn _start() -> ! {
     print!("aye from hello\t");
     println!("now println says something");
     print!("ahoy, {}\n", "amigo");
+    panic!("oh no!");
     println!("hurray!!! {}", "hello");
 
     loop {}
