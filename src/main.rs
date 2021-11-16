@@ -29,8 +29,9 @@ pub extern "C" fn _start() -> ! {
     }
 
     use core::fmt::Write;
-    vga_buffer::WRITER.lock().write_str("hello again mitron").unwrap();
-    write!(vga_buffer::WRITER.lock(), "a = {}, a/b = {}", 3, 1.0/3.0).unwrap();
+    vga_buffer::WRITER.lock().write_str("hello again mitron\n").unwrap();
+    write!(vga_buffer::WRITER.lock(), "Here are some caluclaitons,
+            a = {}, a/b = {}, {}, {}", 3.0/4.0, 1.0/3.0, 1.0/9.0, 7.0/9.0).unwrap();
 
     loop {}
 }
